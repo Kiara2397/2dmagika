@@ -120,13 +120,31 @@ public class Player extends CreatureBase {
 
 
         }
+        
+        for (Item i : getInventory().getInventoryItems()) {
+            if (i.getName() == "Health Potion"&& i.getCount()!=0) {
+            	if(this.getHealth()<75&&this.getHealth()>=65) {
+            		health+=(75-getHealth());
+            		i.setCount(i.getCount()-1);
+            		return;
+            	}if(this.getHealth()<65) {
+            		health+=75-getHealth();
+            		i.setCount(i.getCount()-1);
+            		return;
+            	}
+            	
+                
+    
+            
+            }
 
-
+            }
         //Inventory
         inventory.tick();
-
+        
         //spellgui
         spellGUI.tick();
+            
     }
 
     @Override

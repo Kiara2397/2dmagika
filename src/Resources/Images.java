@@ -31,6 +31,8 @@ public class Images {
     public static BufferedImage inventory;
     public static BufferedImage title;
     public static BufferedImage door;
+    public static BufferedImage CoinItem;
+    public static BufferedImage HealthPotion;
     public static BufferedImage E;
     public static BufferedImage EP;
     public static BufferedImage Pause;
@@ -105,6 +107,8 @@ public class Images {
             BTitle[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitleP.png"));
             Options[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Options.png"));
             Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
+            CoinItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/Coin.png"));
+            HealthPotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/HealthPotion.png"));
 
             //icon
             icon = new ImageIcon(runesheet.crop(Rwidth*1,Rheight*0,Rwidth,Rheight));
