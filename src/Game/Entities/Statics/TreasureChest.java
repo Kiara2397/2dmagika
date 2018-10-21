@@ -81,11 +81,13 @@ public class TreasureChest extends StaticEntity {
     }
     @Override
     public void hurt(int amt){
+    	if(!beinghurt) {
     	rand =new Random();
     	int pickedNumber = rand.nextInt(3)+1; 
     	handler.getWorld().getItemManager().addItem(Item.CoinItem.createNew((int)x + bounds.x + this.width,(int)y + bounds.y,pickedNumber));
     	OpenChest=true;
     	beinghurt=true;
+    	}
     }
     	
     @Override
