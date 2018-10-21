@@ -47,6 +47,7 @@ public class Images {
     public static BufferedImage[] FireBallDown;
     public static BufferedImage loading;
     public static BufferedImage spellGUI;
+    public static BufferedImage[] chest;
 
 
     public Images() {
@@ -58,9 +59,11 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
+        SpriteSheet treasureChest = new SpriteSheet(Images.loadImage("/Sheets/chest2.png"));
 
 
-
+        chest = new BufferedImage[2];
+        
         blocks = new BufferedImage[15];
 
         player_left = new BufferedImage[4];
@@ -109,6 +112,10 @@ public class Images {
             Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
             CoinItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/Coin.png"));
             HealthPotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/HealthPotion.png"));
+            
+            //chest
+            chest[0]= treasureChest.crop(0, 0, width, height);
+            chest[1]= treasureChest.crop(width, 0, width, height);
 
             //icon
             icon = new ImageIcon(runesheet.crop(Rwidth*1,Rheight*0,Rwidth,Rheight));
@@ -204,6 +211,7 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
+            
 
 
             //player anim
