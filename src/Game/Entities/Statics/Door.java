@@ -72,6 +72,10 @@ public class Door extends StaticEntity {
             handler.setWorld(world);
 
         }
+        
+        if(handler.getKeyManager().tabbutt) {
+        	handler.setWorld(world);
+        }
 
 
     }
