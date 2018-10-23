@@ -134,6 +134,16 @@ public class Player extends CreatureBase {
         		}
         	}
         }
+        
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
+        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.woodItem);
+        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.rockItem);
+        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.fireRuneItem);
+        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.HealthPotion);
+        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.CoinItem);
+
+        }
+
 
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_SHIFT)) {
         	health+=75-getHealth();

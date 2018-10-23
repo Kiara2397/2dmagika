@@ -145,6 +145,16 @@ public class Inventory {
         inventoryItems.add(item);
 
     }
+    public void addOneItem(Item item){
+        for(Item i : inventoryItems){
+            if(i.getId() == item.getId()){
+                i.setCount(i.getCount()+1);
+                return;
+            }
+        }
+        inventoryItems.add(item);
+
+    }
 
     //GET SET
     public Handler getHandler() {
