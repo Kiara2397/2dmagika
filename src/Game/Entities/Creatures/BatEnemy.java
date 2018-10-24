@@ -37,7 +37,7 @@ public class BatEnemy extends CreatureBase  {
         bounds.width=16*2;
         bounds.height=14*2;
         speed=1.5f;
-        health=20;
+        health=50;
 
         BatCam= new Rectangle();
 
@@ -179,10 +179,29 @@ public class BatEnemy extends CreatureBase  {
     @Override
     public void render(Graphics g) {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.BatEnemy_front,Images.BatEnemy_back,Images.BatEnemy_left,Images.BatEnemy_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
-        if(isBeinghurt() && healthcounter<=120){
-            g.setColor(Color.white);
-            g.drawString("BatEnemyHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
+//        if(isBeinghurt() && healthcounter<=120){
+//            g.setColor(Color.white);
+//            g.drawString("BatEnemyHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
+//        }
+        g.setColor(Color.BLACK);
+        g.drawRect((int)(x-handler.getGameCamera().getxOffset()-1),(int)(y-handler.getGameCamera().getyOffset()-21),56,11);
+        if(this.getHealth()>=35) {
+            g.setColor(Color.GREEN);
+            g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth()+5,10);
+          
+
+        }else if(this.getHealth()>10 && getHealth()<35){
+            g.setColor(Color.YELLOW);
+            g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth(),10);
+
+        }else if(this.getHealth() <= 10 ){
+            g.setColor(Color.RED);
+            g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth(),10);
+
         }
+        g.setColor(Color.white);
+        g.drawString("Health: " + getHealth(),(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-10));
+
     }
 
 
