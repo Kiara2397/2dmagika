@@ -75,7 +75,7 @@ public class Images {
 
         chest = new BufferedImage[2];
         
-        blocks = new BufferedImage[16];
+        blocks = new BufferedImage[20];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -234,6 +234,10 @@ public class Images {
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
             blocks[15] = Cavesheet.crop(296,70,30,60);//stalagmite
+            blocks[16] = Cavesheet.crop(32,415,32,32);//black
+            blocks[17] = Cavesheet.crop(413, 153, 30, 30);//cavefloor
+            blocks[18] = Cavesheet.crop(471, 285, 54, 54);//cavehallway
+            blocks[19] = Cavesheet.crop(328, 222, 56, 56);//caverocks
             
 
 
@@ -306,20 +310,20 @@ public class Images {
             SkelyFriend_front[2]=Cavesheet.crop(135,210,Catwidth,Catheight);
             SkelyFriend_front[3]=Cavesheet.crop(183,210,Catwidth,Catheight);
 
-            SkelyFriend_left[0]=Cavesheet.crop(30,270,Catwidth,Catheight);
-            SkelyFriend_left[1]=Cavesheet.crop(75,270,Catwidth,Catheight);
-            SkelyFriend_left[2]=Cavesheet.crop(125,270,Catwidth,Catheight);
-            SkelyFriend_left[3]=Cavesheet.crop(175,270,Catwidth,Catheight);
+            SkelyFriend_left[0]=Cavesheet.crop(30,271,Catwidth,Catheight);
+            SkelyFriend_left[1]=Cavesheet.crop(75,271,Catwidth,Catheight);
+            SkelyFriend_left[2]=Cavesheet.crop(125,271,Catwidth,Catheight);
+            SkelyFriend_left[3]=Cavesheet.crop(175,271,Catwidth,Catheight);
 
-            SkelyFriend_right[0]=Cavesheet.crop(30,320,Catwidth,Catheight);
-            SkelyFriend_right[1]=Cavesheet.crop(75,320,Catwidth,Catheight);
-            SkelyFriend_right[2]=Cavesheet.crop(125,320,Catwidth,Catheight);
-            SkelyFriend_right[3]=Cavesheet.crop(175,320,Catwidth,Catheight);
+            SkelyFriend_right[0]=Cavesheet.crop(30,318,Catwidth,Catheight);
+            SkelyFriend_right[1]=Cavesheet.crop(75,318,Catwidth,Catheight);
+            SkelyFriend_right[2]=Cavesheet.crop(125,318,Catwidth,Catheight);
+            SkelyFriend_right[3]=Cavesheet.crop(175,318,Catwidth,Catheight);
 
-            SkelyFriend_back[0]=Cavesheet.crop(38,365,Catwidth,Catheight);
-            SkelyFriend_back[1]=Cavesheet.crop(88,365,Catwidth,Catheight);
-            SkelyFriend_back[2]=Cavesheet.crop(135,365,Catwidth,Catheight);
-            SkelyFriend_back[3]=Cavesheet.crop(183,365,Catwidth,Catheight);
+            SkelyFriend_back[0]=Cavesheet.crop(38,364,Catwidth,Catheight);
+            SkelyFriend_back[1]=Cavesheet.crop(88,364,Catwidth,Catheight);
+            SkelyFriend_back[2]=Cavesheet.crop(135,364,Catwidth,Catheight);
+            SkelyFriend_back[3]=Cavesheet.crop(183,364,Catwidth,Catheight);
             
 
         } catch (IOException e) {

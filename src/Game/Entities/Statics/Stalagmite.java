@@ -23,9 +23,9 @@ public class Stalagmite extends StaticEntity {
     public Stalagmite(Handler handler, float x, float y) {
         super(handler, x, y, Tile.TILEHEIGHT, Tile.TILEWIDTH/2);
         bounds.x=12;
-        bounds.y=16;
-        bounds.width = 24;
-        bounds.height = 32;
+        bounds.y=20;
+        bounds.width = 16;
+        bounds.height = 24;
         health=16;
 
         try {

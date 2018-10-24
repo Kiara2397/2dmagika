@@ -37,6 +37,7 @@ public class SkelyFriend extends CreatureBase  {
         bounds.height=14*2;
         speed=2f;
         health=50;
+        attack=4;
 
         SkelyCam= new Rectangle();
 
@@ -96,10 +97,13 @@ public class SkelyFriend extends CreatureBase  {
         SkelyCam.y = (int) (y - handler.getGameCamera().getyOffset() - (64 * 3));
         SkelyCam.width = 64 * 7;
         SkelyCam.height = 64 * 7;
+//
+//        if (SkelyCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset())
+//                || SkelyCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset() + handler.getWorld().getEntityManager().getPlayer().getWidth(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset() + handler.getWorld().getEntityManager().getPlayer().getHeight())) {
 
             Rectangle cb = getCollisionBounds(0, 0);
             Rectangle ar = new Rectangle();
-            int arSize = 100;
+            int arSize = 13;
             ar.width = arSize;
             ar.height = arSize;
 
@@ -131,8 +135,7 @@ public class SkelyFriend extends CreatureBase  {
             if (x >= handler.getWorld().getEntityManager().getPlayer().getX() - 8 && x <= handler.getWorld().getEntityManager().getPlayer().getX() + 8) {//nada
 
                 xMove = 0;
-            }
-             else if (x < handler.getWorld().getEntityManager().getPlayer().getX()) {//move right
+            } else if (x < handler.getWorld().getEntityManager().getPlayer().getX()) {//move right
 
                 xMove = speed;
 
@@ -149,7 +152,8 @@ public class SkelyFriend extends CreatureBase  {
             } else if (y > handler.getWorld().getEntityManager().getPlayer().getY()) {//move up
                 yMove = -speed;
             }
-        }
+
+    }
 
 
 
