@@ -1,14 +1,18 @@
 package Worlds;
 
 import Game.Entities.Creatures.Player;
+import Game.Entities.Creatures.SkelyFriend;
 import Game.Entities.EntityManager;
 import Game.GameStates.State;
+import Game.Items.Item;
 import Game.Items.ItemManager;
 import Game.Tiles.Tile;
 import Main.Handler;
 import Resources.Utils;
 
 import java.awt.*;
+
+import com.sun.glass.events.KeyEvent;
 
 /**
  * Created by Elemental on 2/10/2017.
@@ -52,6 +56,11 @@ public class BaseWorld {
             countP=0;
             State.setState(handler.getGame().pauseState);
         }
+        
+        if(Item.friendItem.isPickedUp() && handler.getKeyManager().keyJustPressed(KeyEvent.VK_G)) {
+    		  handler.getWorld().getEntityManager().addEntity(new SkelyFriend(handler,entityManager.getPlayer().getX()+entityManager.getPlayer().getWidth(),entityManager.getPlayer().getY()));
+    		  Item.friendItem.setCount(Item.friendItem.getCount()-1);
+    	  }
     }
 
     public void render(Graphics g){

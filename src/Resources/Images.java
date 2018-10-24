@@ -91,12 +91,12 @@ public class Images {
         BatEnemy_right = new BufferedImage[4];
         BatEnemy_front = new BufferedImage[4];
         BatEnemy_back = new BufferedImage[4];
-
+        
         SkelyFriend_left = new BufferedImage[4];
         SkelyFriend_right = new BufferedImage[4];
         SkelyFriend_front = new BufferedImage[4];
         SkelyFriend_back = new BufferedImage[4];
-        
+
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
@@ -194,7 +194,7 @@ public class Images {
             particleSmoke[2]= newsheet.crop(154,400,20,35);
 
             items[0]= newsheet.crop(114,448,30,24);//log
-            items[1]=Cavesheet.crop(442,352,25,25);//friendItem
+            items[1]=Cavesheet.crop(442,352,25,25);//friendItem!!!
 
             numbers[1]= numsheet.crop(17,15,17,22);
             numbers[2]= numsheet.crop(64,16,14,19);
@@ -299,8 +299,8 @@ public class Images {
             BatEnemy_left[1]=Cavesheet.crop(73,149,Batwidth,Batheight);
             BatEnemy_left[2]=Cavesheet.crop(127,149,Batwidth,Batheight);
             BatEnemy_left[3]=Cavesheet.crop(178,149,Batwidth,Batheight);
-            
-          //Skely friend anim
+
+            //Skely friend anim
             SkelyFriend_front[0]=Cavesheet.crop(38,210,Catwidth,Catheight);
             SkelyFriend_front[1]=Cavesheet.crop(88,210,Catwidth,Catheight);
             SkelyFriend_front[2]=Cavesheet.crop(135,210,Catwidth,Catheight);
@@ -320,7 +320,7 @@ public class Images {
             SkelyFriend_back[1]=Cavesheet.crop(88,365,Catwidth,Catheight);
             SkelyFriend_back[2]=Cavesheet.crop(135,365,Catwidth,Catheight);
             SkelyFriend_back[3]=Cavesheet.crop(183,365,Catwidth,Catheight);
-
+            
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -337,7 +337,6 @@ public class Images {
         }
         return null;
     }
-
 
 
 }

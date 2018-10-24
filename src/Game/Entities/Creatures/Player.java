@@ -135,6 +135,16 @@ public class Player extends CreatureBase {
         	}
         }
         
+        for (Item i2 : getInventory().getInventoryItems()) {
+        	if (i2.getName() == "Friend Item" && i2.getCount()!=0) {
+        		Item.friendItem.setPickedUp(true);
+        		if(Item.friendItem.getCount()==0) {
+        			Item.friendItem.setPickedUp(false);
+        			i2.setCount(i2.getCount()-1);
+        		}
+        	}
+        }
+        
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
         	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.woodItem);
         	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.rockItem);
