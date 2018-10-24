@@ -5,6 +5,8 @@ import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.Door;
 import Game.Entities.Statics.Rock;
 import Game.Entities.Statics.Stalagmite;
+import Game.Entities.Statics.TreasureChest;
+import Game.Items.Item;
 import Main.Handler;
 
 /**
@@ -30,9 +32,9 @@ public class CaveWorld extends BaseWorld{
         entityManager.addEntity(new Rock(handler, 1000, 1000));
         entityManager.addEntity(new Rock(handler, 200, 1000));
        // entityManager.addEntity(new Door(handler, 100, 0,world2));
-        entityManager.addEntity(new SkelyEnemy(handler, 1300, 1500));
-        entityManager.addEntity(new SkelyEnemy(handler, 300, 1450));
-
+        entityManager.addEntity(new SkelyEnemy(handler, 1300, 1500,Item.fireRuneItem));
+        entityManager.addEntity(new SkelyEnemy(handler, 300, 1300,Item.HealthPotion));
+        entityManager.addEntity(new TreasureChest(handler,250, 1400,Item.KeyItem));
     }
 
 

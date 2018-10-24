@@ -3,6 +3,7 @@ package Worlds;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.*;
+import Game.Items.Item;
 import Main.Handler;
 
 /**
@@ -26,14 +27,14 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Rock(handler, 88, 1345));
         entityManager.addEntity(new Tree(handler, 77, 700));
         entityManager.addEntity(new Rock(handler, 700, 83));
-        entityManager.addEntity(new TreasureChest(handler, 200, 250));
-        entityManager.addEntity(new TreasureChest(handler, 1250, 400));
-        entityManager.addEntity(new TreasureChest(handler,1300, 1300));
+        entityManager.addEntity(new TreasureChest(handler, 200, 250,Item.CoinItem));
+        entityManager.addEntity(new TreasureChest(handler, 1250, 400,Item.CoinItem));
+        entityManager.addEntity(new TreasureChest(handler,1300, 1300,Item.CoinItem));
         
        	 entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
         
         entityManager.addEntity(new Humanoid(handler, 900, 0,caveWorld));
-        entityManager.addEntity(new SkelyEnemy(handler, 1250, 500));
+        entityManager.addEntity(new SkelyEnemy(handler, 1250, 500,Item.KeyItem));
 
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);

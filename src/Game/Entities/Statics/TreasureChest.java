@@ -23,14 +23,17 @@ public class TreasureChest extends StaticEntity {
     private Clip audioClip;
     private Random rand;
     public Boolean OpenChest = false;
+    public Item QuestItem;
 
-    public TreasureChest(Handler handler, float x, float y) {
+    public TreasureChest(Handler handler, float x, float y, Item questItem) {
         super(handler, x, y, Tile.TILEHEIGHT, Tile.TILEWIDTH);
         bounds.x=0;
         bounds.y=0;
         bounds.width = 64;
         bounds.height = 64;
         health=10000000;
+        this.QuestItem = questItem;
+        
 
         try {
             audioFile = new File("res/music/CoinDrop.wav");
@@ -83,8 +86,11 @@ public class TreasureChest extends StaticEntity {
     public void hurt(int amt){
     	if(!beinghurt) {
     	rand =new Random();
-    	int pickedNumber = rand.nextInt(3)+1; 
-    	handler.getWorld().getItemManager().addItem(Item.CoinItem.createNew((int)x + bounds.x + this.width,(int)y + bounds.y,pickedNumber));
+    	int pickedNumber = 1; 
+    	if(QuestItem.equals(Item.CoinItem)) {
+    		pickedNumber = rand.nextInt(3)+1;
+    	}
+    	handler.getWorld().getItemManager().addItem(this.QuestItem.createNew((int)x + bounds.x + this.width,(int)y + bounds.y,pickedNumber));
     	OpenChest=true;
     	beinghurt=true;
     	}

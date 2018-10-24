@@ -29,8 +29,9 @@ public class SkelyEnemy extends CreatureBase  {
     private Random randint;
     private int moveCount=0;
     private int direction;
+    public Item QuestItem;
 
-    public SkelyEnemy(Handler handler, float x, float y) {
+    public SkelyEnemy(Handler handler, float x, float y, Item questItem) {
         super(handler, x, y, CreatureBase.DEFAULT_CREATURE_WIDTH, CreatureBase.DEFAULT_CREATURE_HEIGHT);
         bounds.x=8*2;
         bounds.y=18*2;
@@ -38,6 +39,7 @@ public class SkelyEnemy extends CreatureBase  {
         bounds.height=14*2;
         speed=1.5f;
         health=50;
+        this.QuestItem = questItem;
 
         SkelyCam= new Rectangle();
 
@@ -190,7 +192,7 @@ public class SkelyEnemy extends CreatureBase  {
 
     @Override
     public void die() {
-    	 handler.getWorld().getItemManager().addItem(Item.KeyItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+    	 handler.getWorld().getItemManager().addItem(this.QuestItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
          
 
     }
