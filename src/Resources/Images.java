@@ -14,7 +14,8 @@ public class Images {
     private static final int Bwidth = 64, Bheight = 64;
     private static final int Rwidth = 56, Rheight = 93;
     private static final int Fwidth = 512, Fheight = 197;
-
+    private static final int Batwidth = 50, Batheight = 40;
+    
     public static BufferedImage[] blocks;
     public static BufferedImage[] player_right;
     public static BufferedImage[] player_left;
@@ -24,6 +25,10 @@ public class Images {
     public static BufferedImage[] SkelyEnemy_left;
     public static BufferedImage[] SkelyEnemy_front;
     public static BufferedImage[] SkelyEnemy_back;
+    public static BufferedImage[] BatEnemy_right;
+    public static BufferedImage[] BatEnemy_left;
+    public static BufferedImage[] BatEnemy_front;
+    public static BufferedImage[] BatEnemy_back;
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
@@ -76,6 +81,11 @@ public class Images {
         SkelyEnemy_right = new BufferedImage[4];
         SkelyEnemy_front = new BufferedImage[4];
         SkelyEnemy_back = new BufferedImage[4];
+        
+        BatEnemy_left = new BufferedImage[4];
+        BatEnemy_right = new BufferedImage[4];
+        BatEnemy_front = new BufferedImage[4];
+        BatEnemy_back = new BufferedImage[4];
 
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
@@ -257,6 +267,28 @@ public class Images {
             SkelyEnemy_back[1]=newsheet.crop(164,227+130,width,height);
             SkelyEnemy_back[2]=newsheet.crop(196,227+130,width,height);
             SkelyEnemy_back[3]=newsheet.crop(228,227+130,28,height);
+            
+            //Bat enemy anim
+            BatEnemy_front[0]=Cavesheet.crop(25,40,Batwidth,Batheight);
+            BatEnemy_front[1]=Cavesheet.crop(73,0,Batwidth,Batheight);
+            BatEnemy_front[2]=Cavesheet.crop(127,0,Batwidth,Batheight);
+            BatEnemy_front[3]=Cavesheet.crop(178,0,Batwidth,Batheight);
+
+            BatEnemy_right[0]=Cavesheet.crop(30,80,Batwidth,Batheight);
+            BatEnemy_right[1]=Cavesheet.crop(73,58,Batwidth,Batheight);
+            BatEnemy_right[2]=Cavesheet.crop(127,58,Batwidth,Batheight);
+            BatEnemy_right[3]=Cavesheet.crop(178,58,Batwidth,Batheight);
+
+            BatEnemy_back[0]=Cavesheet.crop(25,130,Batwidth,Batheight);
+            BatEnemy_back[1]=Cavesheet.crop(73,103,Batwidth,Batheight);
+            BatEnemy_back[2]=Cavesheet.crop(127,103,Batwidth,Batheight);
+            BatEnemy_back[3]=Cavesheet.crop(178,103,Batwidth,Batheight);
+
+            BatEnemy_left[0]=Cavesheet.crop(30,172,Batwidth,Batheight);
+            BatEnemy_left[1]=Cavesheet.crop(73,149,Batwidth,Batheight);
+            BatEnemy_left[2]=Cavesheet.crop(127,149,Batwidth,Batheight);
+            BatEnemy_left[3]=Cavesheet.crop(178,149,Batwidth,Batheight);
+
 
         } catch (IOException e) {
             e.printStackTrace();
