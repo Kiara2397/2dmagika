@@ -133,16 +133,14 @@ public class Player extends CreatureBase {
         			return;
         		}
         	}
-        }
-        
-        for (Item i2 : getInventory().getInventoryItems()) {
-        	if (i2.getName() == "Friend Item" && i2.getCount()!=0) {
+           	if (i.getName() == "Friend Item" && i.getCount()!=0) {
         		Item.friendItem.setPickedUp(true);
         		if(Item.friendItem.getCount()==0) {
         			Item.friendItem.setPickedUp(false);
-        			i2.setCount(i2.getCount()-1);
+        			i.setCount(i.getCount()-1);
         		}
         	}
+        	
         }
         
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
