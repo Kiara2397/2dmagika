@@ -2,6 +2,7 @@ package Game.Entities.Creatures;
 
 import Game.Entities.EntityBase;
 import Game.Inventories.Inventory;
+import Game.Items.Item;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
@@ -189,6 +190,8 @@ public class BatEnemy extends CreatureBase  {
 
     @Override
     public void die() {
+    	handler.getWorld().getItemManager().addItem(Item.friendItem.createNew((int)x + bounds.x,(int)y + bounds.y,randint.nextInt(1) + 1));
+  
         	
     }
 }

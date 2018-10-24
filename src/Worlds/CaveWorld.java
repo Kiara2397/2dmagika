@@ -1,5 +1,7 @@
 package Worlds;
+import Game.Entities.Creatures.BatEnemy;
 import Game.Entities.Creatures.Player;
+import Game.Entities.Statics.Stalagmite;
 import Main.Handler;
 
 /**
@@ -13,6 +15,9 @@ public class CaveWorld extends BaseWorld{
         super(handler,path,player);
         this.handler = handler;
         this.player=player;
+        
+        entityManager.addEntity(new BatEnemy(handler,200,200));
+        entityManager.addEntity(new Stalagmite(handler,100,300));
 
     }
 
