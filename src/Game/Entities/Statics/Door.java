@@ -50,6 +50,9 @@ public class Door extends StaticEntity {
         }else if(!handler.getKeyManager().attbut){
             EP=false;
         }
+        if(handler.getKeyManager().tabbutt) {
+        	handler.setWorld(world);
+        }
 
     }
 
@@ -77,9 +80,7 @@ public class Door extends StaticEntity {
 
         }
         
-        if(handler.getKeyManager().tabbutt) {
-        	handler.setWorld(world);
-        }
+  
 
     }
     
