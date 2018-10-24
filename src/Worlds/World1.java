@@ -29,9 +29,9 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new TreasureChest(handler, 200, 250));
         entityManager.addEntity(new TreasureChest(handler, 1250, 400));
         entityManager.addEntity(new TreasureChest(handler,1300, 1300));
-        if(Humanoid.TradeComplete==true) {
-        	  entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
-        }
+        
+       	 entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
+        
         entityManager.addEntity(new Humanoid(handler, 900, 0,caveWorld));
         entityManager.addEntity(new SkelyEnemy(handler, 1250, 500));
 
