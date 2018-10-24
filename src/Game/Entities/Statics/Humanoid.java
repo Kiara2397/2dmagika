@@ -89,7 +89,7 @@ public class Humanoid extends StaticEntity {
     					
     				}
     			}
-    			if(i.getId()==5) {
+    			if(i.getId()==6) {
     				KeyCounter-=i.getCount();
     				i.setCount(0);
     				if(KeyCounter<0) {
