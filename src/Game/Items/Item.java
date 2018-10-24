@@ -33,6 +33,8 @@ public class Item {
     public static Item CoinItem = new Item(Images.CoinItem,"Coin",3);
     public static Item HealthPotion = new Item(Images.HealthPotion,"Health Potion",4);
     public static Item friendItem = new Item(Images.items[1],"Friend Item",5);
+    public static Item KeyItem = new Item(Images.KeyItem,"Key",5);
+
 
 
     //class

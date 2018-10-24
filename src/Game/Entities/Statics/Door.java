@@ -54,12 +54,16 @@ public class Door extends StaticEntity {
     }
 
     @Override
+    
     public void render(Graphics g) {
+    	if(Humanoid.TradeComplete) {
         g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 
         g.setColor(Color.black);
         checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
     }
+    }
+    
 
     private void checkForPlayer(Graphics g, Player p) {
         Rectangle pr = p.getCollisionBounds(0,0);
@@ -77,8 +81,11 @@ public class Door extends StaticEntity {
         	handler.setWorld(world);
         }
 
-
     }
+    
+    
+
+    
 
     @Override
     public void die() {
