@@ -33,6 +33,8 @@ public class Images {
     public static BufferedImage door;
     public static BufferedImage CoinItem;
     public static BufferedImage HealthPotion;
+    public static BufferedImage KeyItem;
+    public static BufferedImage Humanoid;
     public static BufferedImage E;
     public static BufferedImage EP;
     public static BufferedImage Pause;
@@ -112,6 +114,8 @@ public class Images {
             Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
             CoinItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/Coin.png"));
             HealthPotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/HealthPotion.png"));
+            Humanoid = ImageIO.read(getClass().getResourceAsStream("/Sheets/Humanoid.png"));
+            KeyItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/KeyItem.png"));
             
             //chest
             chest[0]= treasureChest.crop(0, 0, width, height);
