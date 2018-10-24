@@ -65,7 +65,7 @@ public class Images {
 
         chest = new BufferedImage[2];
         
-        blocks = new BufferedImage[15];
+        blocks = new BufferedImage[16];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -212,6 +212,7 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
+            blocks[15] = Cavesheet.crop(296,70,30,60);//stalagmite
             
 
 
