@@ -60,6 +60,7 @@ public class Images {
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet treasureChest = new SpriteSheet(Images.loadImage("/Sheets/chest2.png"));
+        SpriteSheet Cavesheet = new SpriteSheet(Images.loadImage("/Sheets/CaveSheet.png"));
 
 
         chest = new BufferedImage[2];
