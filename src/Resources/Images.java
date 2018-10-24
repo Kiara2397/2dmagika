@@ -15,6 +15,7 @@ public class Images {
     private static final int Rwidth = 56, Rheight = 93;
     private static final int Fwidth = 512, Fheight = 197;
     private static final int Batwidth = 50, Batheight = 40;
+    private static final int Catwidth = 45, Catheight = 50;
     
     public static BufferedImage[] blocks;
     public static BufferedImage[] player_right;
@@ -29,6 +30,10 @@ public class Images {
     public static BufferedImage[] BatEnemy_left;
     public static BufferedImage[] BatEnemy_front;
     public static BufferedImage[] BatEnemy_back;
+    public static BufferedImage[] SkelyFriend_right;
+    public static BufferedImage[] SkelyFriend_left;
+    public static BufferedImage[] SkelyFriend_front;
+    public static BufferedImage[] SkelyFriend_back;
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
@@ -87,6 +92,11 @@ public class Images {
         BatEnemy_front = new BufferedImage[4];
         BatEnemy_back = new BufferedImage[4];
 
+        SkelyFriend_left = new BufferedImage[4];
+        SkelyFriend_right = new BufferedImage[4];
+        SkelyFriend_front = new BufferedImage[4];
+        SkelyFriend_back = new BufferedImage[4];
+        
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
@@ -289,6 +299,27 @@ public class Images {
             BatEnemy_left[1]=Cavesheet.crop(73,149,Batwidth,Batheight);
             BatEnemy_left[2]=Cavesheet.crop(127,149,Batwidth,Batheight);
             BatEnemy_left[3]=Cavesheet.crop(178,149,Batwidth,Batheight);
+            
+          //Skely friend anim
+            SkelyFriend_front[0]=Cavesheet.crop(38,210,Catwidth,Catheight);
+            SkelyFriend_front[1]=Cavesheet.crop(88,210,Catwidth,Catheight);
+            SkelyFriend_front[2]=Cavesheet.crop(135,210,Catwidth,Catheight);
+            SkelyFriend_front[3]=Cavesheet.crop(183,210,Catwidth,Catheight);
+
+            SkelyFriend_left[0]=Cavesheet.crop(30,270,Catwidth,Catheight);
+            SkelyFriend_left[1]=Cavesheet.crop(75,270,Catwidth,Catheight);
+            SkelyFriend_left[2]=Cavesheet.crop(125,270,Catwidth,Catheight);
+            SkelyFriend_left[3]=Cavesheet.crop(175,270,Catwidth,Catheight);
+
+            SkelyFriend_right[0]=Cavesheet.crop(30,320,Catwidth,Catheight);
+            SkelyFriend_right[1]=Cavesheet.crop(75,320,Catwidth,Catheight);
+            SkelyFriend_right[2]=Cavesheet.crop(125,320,Catwidth,Catheight);
+            SkelyFriend_right[3]=Cavesheet.crop(175,320,Catwidth,Catheight);
+
+            SkelyFriend_back[0]=Cavesheet.crop(38,365,Catwidth,Catheight);
+            SkelyFriend_back[1]=Cavesheet.crop(88,365,Catwidth,Catheight);
+            SkelyFriend_back[2]=Cavesheet.crop(135,365,Catwidth,Catheight);
+            SkelyFriend_back[3]=Cavesheet.crop(183,365,Catwidth,Catheight);
 
 
         } catch (IOException e) {
