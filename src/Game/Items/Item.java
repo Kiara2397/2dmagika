@@ -30,11 +30,18 @@ public class Item {
     public static Item woodItem = new Item(Images.items[0],"Wood",0);
     public static Item rockItem = new Item(Images.blocks[14],"Rock",1);
     public static Item fireRuneItem = new Item(Images.Runes[2],"Fire Rune",2);
+    public static Item airRuneItem = new Item(Images.Runes[3],"Air Rune",8);
+    public static Item waterRuneItem = new Item(Images.Runes[4],"Water Rune",9);
+    public static Item earthRuneItem = new Item(Images.Runes[5],"Earth Rune",10);
+    public static Item metalRuneItem = new Item(Images.Runes[6],"Metal Rune",11);
+    public static Item plantRuneItem = new Item(Images.Runes[1],"Plant Rune",12);
     public static Item CoinItem = new Item(Images.CoinItem,"Coin",3);
     public static Item HealthPotion = new Item(Images.HealthPotion,"Health Potion",4);
     public static Item friendItem = new Item(Images.items[1],"Friend Item",5);
     public static Item KeyItem = new Item(Images.KeyItem,"Key",6);
     public static Item AttackPotion = new Item(Images.items[2],"Attack Potion",7);
+
+    
 
 
 

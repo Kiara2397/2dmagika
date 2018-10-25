@@ -75,10 +75,11 @@ public class SpellCastUI {
     }
 
     private void renderSpells(Graphics g) {
-        if(spellList.size()==1){
-            g.drawImage(spellList.get(0).textture,598+10,556+7,24,30,null);
+    	for(int i=0; i<spellList.size(); i++) {
+    		int space=33*i;
+            g.drawImage(spellList.get(i).textture,608+space,556+7,24,30,null);
         }
-    }
+     }
 
     public void addSpell(Spells spell){
         for(Spells s : spellList){
