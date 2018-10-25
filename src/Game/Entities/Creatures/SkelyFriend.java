@@ -97,9 +97,7 @@ public class SkelyFriend extends CreatureBase  {
         SkelyCam.y = (int) (y - handler.getGameCamera().getyOffset() - (64 * 3));
         SkelyCam.width = 64 * 7;
         SkelyCam.height = 64 * 7;
-//
-//        if (SkelyCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset())
-//                || SkelyCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset() + handler.getWorld().getEntityManager().getPlayer().getWidth(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset() + handler.getWorld().getEntityManager().getPlayer().getHeight())) {
+
 
             Rectangle cb = getCollisionBounds(0, 0);
             Rectangle ar = new Rectangle();
@@ -124,7 +122,8 @@ public class SkelyFriend extends CreatureBase  {
             for (EntityBase e : handler.getWorld().getEntityManager().getEntities()) {
                 if (e.equals(this))
                     continue;
-                if (e.getCollisionBounds(0, 0).intersects(ar) && !(e.equals(handler.getWorld().getEntityManager().getPlayer()))) {
+                if ((e.getCollisionBounds(0, 0).intersects(ar) && (e instanceof SkelyEnemy)) ||
+                		(e.getCollisionBounds(0, 0).intersects(ar) && (e instanceof BatEnemy))) {
 
                     checkAttacks();
                     return;

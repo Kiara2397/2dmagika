@@ -265,7 +265,7 @@ public class Player extends CreatureBase {
         for(EntityBase e : handler.getWorld().getEntityManager().getEntities()){
             if(e.equals(this))
                 continue;
-            if(e.getCollisionBounds(0, 0).intersects(ar)){
+            if(e.getCollisionBounds(0, 0).intersects(ar) && !(e instanceof SkelyFriend)){
                 e.hurt(attack);
                 System.out.println(e + " has " + e.getHealth() + " lives.");
                 return;
@@ -277,7 +277,7 @@ public class Player extends CreatureBase {
     @Override
     public void die(){
         System.out.println("You lose");
-        State.setState(handler.getGame().menuState);
+        State.setState(handler.getGame().gameOverState);
     }
 
     private void getInput(){
