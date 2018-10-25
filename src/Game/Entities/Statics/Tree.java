@@ -76,6 +76,7 @@ public class Tree extends StaticEntity {
     public void die() {
         handler.getWorld().getItemManager().addItem(Item.woodItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
         handler.getWorld().getItemManager().addItem(Item.HealthPotion.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+        handler.getWorld().getItemManager().addItem(Item.AttackPotion.createNew((int)x + bounds.x,(int)y + bounds.y,1));
 
 
     }

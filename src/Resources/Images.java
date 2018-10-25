@@ -73,11 +73,12 @@ public class Images {
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet treasureChest = new SpriteSheet(Images.loadImage("/Sheets/chest2.png"));
         SpriteSheet Cavesheet = new SpriteSheet(Images.loadImage("/Sheets/CaveSheet.png"));
+        SpriteSheet World2 = new SpriteSheet(Images.loadImage("/Sheets/World2.png"));
 
 
         chest = new BufferedImage[2];
         
-        blocks = new BufferedImage[20];
+        blocks = new BufferedImage[22];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -199,6 +200,7 @@ public class Images {
 
             items[0]= newsheet.crop(114,448,30,24);//log
             items[1]=Cavesheet.crop(442,352,25,25);//friendItem!!!
+            items[2] = World2.crop(15, 16, 68, 98);//attackpotion!
 
             numbers[1]= numsheet.crop(17,15,17,22);
             numbers[2]= numsheet.crop(64,16,14,19);
@@ -242,6 +244,8 @@ public class Images {
             blocks[17] = Cavesheet.crop(413, 153, 30, 30);//cavefloor
             blocks[18] = Cavesheet.crop(471, 285, 54, 54);//cavehallway
             blocks[19] = Cavesheet.crop(328, 222, 56, 56);//caverocks
+            blocks[20] = World2.crop(80, 248, 90, 90);
+            blocks[21] = World2.crop(80, 129, 128, 91);
             
 
 

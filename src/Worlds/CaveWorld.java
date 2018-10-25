@@ -15,14 +15,14 @@ import Main.Handler;
 public class CaveWorld extends BaseWorld{
     private Handler handler;
     private Player player;
-   // private BaseWorld world2;
+   private BaseWorld world2;
 
     
     public CaveWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
         this.handler = handler;
         this.player=player;
-        //world2 = new CaveWorld(handler,"res/Maps/map2.map",player);
+        world2 = new World2(handler,"res/Maps/map2.map",player);
 
         
         entityManager.addEntity(new BatEnemy(handler,100,600));
@@ -31,7 +31,7 @@ public class CaveWorld extends BaseWorld{
         entityManager.addEntity(new Stalagmite(handler,300,700));
         entityManager.addEntity(new Rock(handler, 1000, 1000));
         entityManager.addEntity(new Rock(handler, 200, 1000));
-       // entityManager.addEntity(new Door(handler, 100, 0,world2));
+        entityManager.addEntity(new Door(handler, 100, 0,world2));
         entityManager.addEntity(new SkelyEnemy(handler, 1300, 1500,Item.fireRuneItem));
         entityManager.addEntity(new SkelyEnemy(handler, 300, 1300,Item.HealthPotion));
         entityManager.addEntity(new TreasureChest(handler,250, 1400,Item.KeyItem));

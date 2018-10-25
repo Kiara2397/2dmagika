@@ -34,6 +34,7 @@ public class Item {
     public static Item HealthPotion = new Item(Images.HealthPotion,"Health Potion",4);
     public static Item friendItem = new Item(Images.items[1],"Friend Item",5);
     public static Item KeyItem = new Item(Images.KeyItem,"Key",6);
+    public static Item AttackPotion = new Item(Images.items[2],"Attack Potion",7);
 
 
 

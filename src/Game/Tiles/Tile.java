@@ -30,7 +30,8 @@ public class Tile {
     public static Tile topwallTile = new BorderTile(Images.blocks[10],10);
     public static Tile lowerwallTile = new BorderTile(Images.blocks[11],11);
     public static Tile blackTile = new BorderTile(Images.blocks[16],16);
-
+    public static Tile lavaTile = new BorderTile(Images.blocks[20],20);
+    public static Tile world2FloorTile = new world2FloorTile(21);
     //CLASS
 
 
