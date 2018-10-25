@@ -40,6 +40,7 @@ public class Images {
     public static BufferedImage[] numbers;
     public static BufferedImage inventory;
     public static BufferedImage title;
+    public static BufferedImage gameOver;
     public static BufferedImage door;
     public static BufferedImage CoinItem;
     public static BufferedImage HealthPotion;
@@ -51,6 +52,8 @@ public class Images {
     public static BufferedImage[] Resume;
     public static BufferedImage[] BTitle;
     public static BufferedImage[] Options;
+	public static BufferedImage[] Retry;
+	public static BufferedImage[] Quit;
     public static BufferedImage[] Runes;
     public static ImageIcon icon;
     public static BufferedImage[] FireBallLeft;
@@ -107,6 +110,8 @@ public class Images {
         Resume = new BufferedImage[2];
         BTitle = new BufferedImage[2];
         Options = new BufferedImage[2];
+        Retry = new BufferedImage[2];
+		Quit = new BufferedImage[2];
         Runes = new BufferedImage[36];
 
         FireBallLeft = new BufferedImage[6];
@@ -124,6 +129,7 @@ public class Images {
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
+            gameOver =  ImageIO.read(getClass().getResourceAsStream("/Sheets/GameOver.png"));
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
             E = ImageIO.read(getClass().getResourceAsStream("/Buttons/E.png"));
             EP = ImageIO.read(getClass().getResourceAsStream("/Buttons/EP.png"));
@@ -134,6 +140,7 @@ public class Images {
             BTitle[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitleP.png"));
             Options[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Options.png"));
             Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
+            
             CoinItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/Coin.png"));
             HealthPotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/HealthPotion.png"));
             Humanoid = ImageIO.read(getClass().getResourceAsStream("/Sheets/Humanoid.png"));
@@ -193,14 +200,24 @@ public class Images {
             butstart[0]= newsheet.crop(11,422,93,34);//normbut
             butstart[1]= newsheet.crop(11,456,93,33);//hoverbut
             butstart[2]= newsheet.crop(11,489,93,32);//clickbut
+            
+        	Retry[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Retry.png"));
+			Retry[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/RetryP.png"));
+			
+			Quit[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Quit.png"));
+			Quit[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/QuitP.png"));
 
             particleSmoke[0]= newsheet.crop(111,397,18,38);
             particleSmoke[1]= newsheet.crop(129,399,20,35);
             particleSmoke[2]= newsheet.crop(154,400,20,35);
 
             items[0]= newsheet.crop(114,448,30,24);//log
-            items[1]=Cavesheet.crop(442,352,25,25);//friendItem!!!
+
+           
             items[2] = World2.crop(15, 16, 68, 98);//attackpotion!
+
+            items[1]=Cavesheet.crop(442,352,25,25);//friendItem
+
 
             numbers[1]= numsheet.crop(17,15,17,22);
             numbers[2]= numsheet.crop(64,16,14,19);
