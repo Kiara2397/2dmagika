@@ -36,7 +36,7 @@ public class TreasureChest extends StaticEntity {
         
 
         try {
-            audioFile = new File("res/music/CoinDrop.wav");
+            audioFile = new File("res/music/OpeningChest.wav");
             audioStream = AudioSystem.getAudioInputStream(audioFile);
             format = audioStream.getFormat();
             info = new DataLine.Info(Clip.class, format);
