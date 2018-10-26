@@ -46,6 +46,7 @@ public class Images {
     public static BufferedImage inventory;
     public static BufferedImage title;
     public static BufferedImage gameOver;
+    public static BufferedImage gameWon;
     public static BufferedImage door;
     public static BufferedImage CoinItem;
     public static BufferedImage HealthPotion;
@@ -58,6 +59,7 @@ public class Images {
     public static BufferedImage[] BTitle;
     public static BufferedImage[] Options;
 	public static BufferedImage[] Retry;
+	public static BufferedImage[] Replay;
 	public static BufferedImage[] Quit;
     public static BufferedImage[] Runes;
     public static ImageIcon icon;
@@ -122,6 +124,7 @@ public class Images {
         Options = new BufferedImage[2];
         Retry = new BufferedImage[2];
 		Quit = new BufferedImage[2];
+		Replay = new BufferedImage[2];
         Runes = new BufferedImage[36];
 
         FireBallLeft = new BufferedImage[6];
@@ -140,6 +143,7 @@ public class Images {
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
             gameOver =  ImageIO.read(getClass().getResourceAsStream("/Sheets/GameOver.png"));
+            gameWon =  ImageIO.read(getClass().getResourceAsStream("/Sheets/GameWon.png"));
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
             E = ImageIO.read(getClass().getResourceAsStream("/Buttons/E.png"));
             EP = ImageIO.read(getClass().getResourceAsStream("/Buttons/EP.png"));
@@ -216,6 +220,9 @@ public class Images {
 			
 			Quit[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Quit.png"));
 			Quit[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/QuitP.png"));
+			
+			Replay[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Replay.png"));
+			Replay[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/ReplayP.png"));
 
             particleSmoke[0]= newsheet.crop(111,397,18,38);
             particleSmoke[1]= newsheet.crop(129,399,20,35);
