@@ -1,6 +1,6 @@
 package Worlds;
 import Game.Entities.Creatures.BatEnemy;
-import Game.Entities.Creatures.BossEnemy;
+import Game.Entities.Creatures.SmallBossEnemy;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.Door;
@@ -16,6 +16,7 @@ import Main.Handler;
 public class World2 extends BaseWorld{
     private Handler handler;
     private Player player;
+    private BaseWorld finalWorld;
    
 
     
@@ -23,13 +24,15 @@ public class World2 extends BaseWorld{
         super(handler,path,player);
         this.handler = handler;
         this.player=player;
+        finalWorld = new FinalWorld(handler,"res/Maps/Finalmap.map",player);
        
-
+        entityManager.addEntity(new SmallBossEnemy(handler, 1300, 1500));
+        entityManager.addEntity(new SkelyEnemy(handler, 1400, 500,Item.AttackPotion));
+        entityManager.addEntity(new SkelyEnemy(handler, 300, 700,Item.AttackPotion));
+        entityManager.addEntity(new BatEnemy(handler,500,500,Item.AttackPotion));
+        entityManager.addEntity(new BatEnemy(handler,400,1500,Item.AttackPotion));
+        entityManager.addEntity(new Door(handler,300,0,finalWorld));
         
-       
-        entityManager.addEntity(new BossEnemy(handler, 1300, 1500,Item.fireRuneItem));
-        entityManager.addEntity(new SkelyEnemy(handler, 1400, 500,Item.fireRuneItem));
-        entityManager.addEntity(new SkelyEnemy(handler, 300, 1300,Item.HealthPotion));
         
         
     }

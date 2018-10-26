@@ -39,6 +39,10 @@ public class Images {
     public static BufferedImage[] SmallBoss_left;
     public static BufferedImage[] SmallBoss_front;
     public static BufferedImage[] SmallBoss_back;
+    public static BufferedImage[] BigBoss_right;
+    public static BufferedImage[] BigBoss_left;
+    public static BufferedImage[] BigBoss_front;
+    public static BufferedImage[] BigBoss_back;
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
@@ -114,6 +118,11 @@ public class Images {
         SmallBoss_right = new BufferedImage[4];
         SmallBoss_front = new BufferedImage[4];
         SmallBoss_back = new BufferedImage[4];
+        
+        BigBoss_left = new BufferedImage[4];
+        BigBoss_right = new BufferedImage[4];
+        BigBoss_front = new BufferedImage[4];
+        BigBoss_back = new BufferedImage[4];
         
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
@@ -341,10 +350,10 @@ public class Images {
             BatEnemy_back[2]=Cavesheet.crop(127,103,Batwidth,Batheight);
             BatEnemy_back[3]=Cavesheet.crop(178,103,Batwidth,Batheight);
 
-            BatEnemy_left[0]=Cavesheet.crop(30,172,Batwidth,Batheight);
-            BatEnemy_left[1]=Cavesheet.crop(73,149,Batwidth,Batheight);
-            BatEnemy_left[2]=Cavesheet.crop(127,149,Batwidth,Batheight);
-            BatEnemy_left[3]=Cavesheet.crop(178,149,Batwidth,Batheight);
+            BatEnemy_left[0]=Cavesheet.crop(30,172,Batwidth,38);
+            BatEnemy_left[1]=Cavesheet.crop(73,149,Batwidth,38);
+            BatEnemy_left[2]=Cavesheet.crop(127,149,Batwidth,38);
+            BatEnemy_left[3]=Cavesheet.crop(178,149,Batwidth,38);
 
             //Skely friend anim
             SkelyFriend_front[0]=Cavesheet.crop(38,210,Catwidth,Catheight);
@@ -388,6 +397,26 @@ public class Images {
             SmallBoss_back[2]=World2.crop(194,476,Bosswidth,Bossheight);
             SmallBoss_back[3]=World2.crop(225,476,Bosswidth,Bossheight);
             
+            //Big Boss anim
+            BigBoss_front[0]=World2.crop(0,339,Bosswidth,Bossheight);
+            BigBoss_front[1]=World2.crop(32,339,Bosswidth,Bossheight);
+            BigBoss_front[2]=World2.crop(32,339,Bosswidth,Bossheight);
+            BigBoss_front[3]=World2.crop(95,339,Bosswidth,Bossheight);
+
+            BigBoss_left[0]=World2.crop(0,384,Bosswidth,Bossheight);
+            BigBoss_left[1]=World2.crop(32,384,Bosswidth,Bossheight);
+            BigBoss_left[2]=World2.crop(62,384,Bosswidth,Bossheight);
+            BigBoss_left[3]=World2.crop(95,384,Bosswidth,Bossheight);
+
+            BigBoss_right[0]=World2.crop(0,431,Bosswidth,Bossheight);
+            BigBoss_right[1]=World2.crop(32,431,Bosswidth,Bossheight);
+            BigBoss_right[2]=World2.crop(62,431,Bosswidth,Bossheight);
+            BigBoss_right[3]=World2.crop(95,431,Bosswidth,Bossheight);
+
+            BigBoss_back[0]=World2.crop(0,476,Bosswidth,Bossheight);
+            BigBoss_back[1]=World2.crop(32,476,Bosswidth,Bossheight);
+            BigBoss_back[2]=World2.crop(62,476,Bosswidth,Bossheight);
+            BigBoss_back[3]=World2.crop(95,476,Bosswidth,Bossheight);
 
         } catch (IOException e) {
             e.printStackTrace();

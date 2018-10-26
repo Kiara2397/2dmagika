@@ -1,11 +1,15 @@
 package Game.Entities.Creatures;
 
 import Game.Entities.EntityBase;
+import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
+import Worlds.BaseWorld;
+import Worlds.FinalWorld;
+import Worlds.World1;
 
 import java.awt.*;
 import java.util.Random;
@@ -13,7 +17,7 @@ import java.util.Random;
 /**
  * Created by Elemental on 2/7/2017.
  */
-public class BossEnemy extends CreatureBase  {
+public class BigBossEnemy extends CreatureBase  {
 
 
     private Animation animDown, animUp, animLeft, animRight;
@@ -29,18 +33,16 @@ public class BossEnemy extends CreatureBase  {
     private Random randint;
     private int moveCount=0;
     private int direction;
-    public Item QuestItem;
-
-    public BossEnemy(Handler handler, float x, float y, Item questItem) {
-        super(handler, x, y, 100, 100);
-        bounds.x=8*2;
-        bounds.y=18*2;
-        bounds.width=64;
+    
+    public BigBossEnemy(Handler handler, float x, float y) {
+        super(handler, x, y, 95, 95);
+        bounds.x=16;
+        bounds.y=20;
+        bounds.width=60;
         bounds.height=80;
         speed=1.7f;
-        health=80;
-        attack=8;
-        this.QuestItem = questItem;
+        health=150;
+        attack=10;
 
         SkelyCam= new Rectangle();
 
@@ -49,10 +51,10 @@ public class BossEnemy extends CreatureBase  {
         randint = new Random();
         direction = randint.nextInt(4) + 1;
 
-        animDown = new Animation(animWalkingSpeed, Images.SmallBoss_front);
-        animLeft = new Animation(animWalkingSpeed,Images.SmallBoss_left);
-        animRight = new Animation(animWalkingSpeed,Images.SmallBoss_right);
-        animUp = new Animation(animWalkingSpeed,Images.SmallBoss_back);
+        animDown = new Animation(animWalkingSpeed, Images.BigBoss_front);
+        animLeft = new Animation(animWalkingSpeed,Images.BigBoss_left);
+        animRight = new Animation(animWalkingSpeed,Images.BigBoss_right);
+        animUp = new Animation(animWalkingSpeed,Images.BigBoss_back);
 
         Skelyinventory= new Inventory(handler);
     }
@@ -181,19 +183,19 @@ public class BossEnemy extends CreatureBase  {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.SmallBoss_front,Images.SmallBoss_back,Images.SmallBoss_left,Images.SmallBoss_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
+        g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.BigBoss_front,Images.BigBoss_back,Images.BigBoss_left,Images.BigBoss_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         g.setColor(Color.BLACK);
-        g.drawRect((int)(x-handler.getGameCamera().getxOffset()-1),(int)(y-handler.getGameCamera().getyOffset()-21),80,11);
-        if(this.getHealth()>=55) {
+        g.drawRect((int)(x-handler.getGameCamera().getxOffset()-1),(int)(y-handler.getGameCamera().getyOffset()-21),151,11);
+        if(this.getHealth()>=80) {
             g.setColor(Color.GREEN);
             g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth()+5,10);
           
 
-        }else if(this.getHealth()>15 && getHealth()<55){
+        }else if(this.getHealth()>25 && getHealth()<80){
             g.setColor(Color.YELLOW);
             g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth(),10);
 
-        }else if(this.getHealth() <= 15 ){
+        }else if(this.getHealth() <= 25 ){
             g.setColor(Color.RED);
             g.fillRect((int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-20),getHealth(),10);
 
@@ -208,7 +210,8 @@ public class BossEnemy extends CreatureBase  {
 
     @Override
     public void die() {
-    	 handler.getWorld().getItemManager().addItem(this.QuestItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+    	State.setState(handler.getGame().gameWonState);
+    	
 
     }
 }
