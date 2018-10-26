@@ -5,6 +5,9 @@ import Game.GameStates.State;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
+import Worlds.CaveWorld;
+import Worlds.World1;
+import Worlds.World2;
 
 import java.awt.*;
 
@@ -51,11 +54,19 @@ public class Door extends StaticEntity {
             EP=false;
         }
         if(handler.getKeyManager().tabbutt) {
+        	 BaseWorld world1 = new World1(handler, "res/Maps/map1.map", handler.getWorld().getEntityManager().getPlayer());
+             BaseWorld caveworld = new CaveWorld(handler, "res/Maps/caveMap.map", handler.getWorld().getEntityManager().getPlayer());
+             BaseWorld world2 = new World2(handler, "res/Maps/map2.map", handler.getWorld().getEntityManager().getPlayer());
+             
+            BaseWorld[] worlds = {world1,caveworld,world2};
+            for (BaseWorld nextworld: worlds) {
+            handler.setWorld(nextworld);
         	handler.setWorld(world);
-        	handler.getWorld().getEntityManager().getPlayer().setX(100);
+        	handler.getWorld().getEntityManager().getPlayer().setX(150);
         	handler.getWorld().getEntityManager().getPlayer().setY(100);
         }
-
+        
+        }
     }
 
     @Override
