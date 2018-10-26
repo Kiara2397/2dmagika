@@ -27,8 +27,8 @@ public class FinalWorld extends BaseWorld{
        
         entityManager.addEntity(new BigBossEnemy(handler, 700, 800));
         
-        
-        
+        entityManager.getPlayer().setX(130);
+        entityManager.getPlayer().setY(90);
     }
 
 
