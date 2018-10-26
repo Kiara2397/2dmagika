@@ -28,10 +28,10 @@ public class CaveWorld extends BaseWorld{
 
         
         entityManager.addEntity(new BatEnemy(handler,100,600,Item.friendItem));
-        entityManager.addEntity(new Stalagmite(handler,200,190));
+        entityManager.addEntity(new Stalagmite(handler,400,190));
         entityManager.addEntity(new Stalagmite(handler,1100,550));
         entityManager.addEntity(new Stalagmite(handler,300,700));
-        entityManager.addEntity(new Stalagmite(handler,400,75));
+        entityManager.addEntity(new Stalagmite(handler,140,150));
         entityManager.addEntity(new Rock(handler, 1000, 1000));
         entityManager.addEntity(new Rock(handler, 200, 1000));
         entityManager.addEntity(new Door(handler, 200, 0,world2));

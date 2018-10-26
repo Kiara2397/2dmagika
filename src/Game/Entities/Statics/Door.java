@@ -63,7 +63,7 @@ public class Door extends StaticEntity {
             handler.setWorld(nextworld);
         	handler.setWorld(world);
         	handler.getWorld().getEntityManager().getPlayer().setX(150);
-        	handler.getWorld().getEntityManager().getPlayer().setY(100);
+        	handler.getWorld().getEntityManager().getPlayer().setY(90);
         }
         
         }
