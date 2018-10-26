@@ -1,5 +1,6 @@
 package Worlds;
 import Game.Entities.Creatures.BatEnemy;
+import Game.Entities.Creatures.BossEnemy;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.Door;
@@ -26,9 +27,10 @@ public class World2 extends BaseWorld{
 
         
        
-       
-        entityManager.addEntity(new SkelyEnemy(handler, 1300, 1500,Item.fireRuneItem));
+        entityManager.addEntity(new BossEnemy(handler, 1300, 1500,Item.fireRuneItem));
+        entityManager.addEntity(new SkelyEnemy(handler, 1400, 500,Item.fireRuneItem));
         entityManager.addEntity(new SkelyEnemy(handler, 300, 1300,Item.HealthPotion));
+        
         
     }
 

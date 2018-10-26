@@ -16,6 +16,7 @@ public class Images {
     private static final int Fwidth = 512, Fheight = 197;
     private static final int Batwidth = 50, Batheight = 40;
     private static final int Catwidth = 45, Catheight = 50;
+    private static final int Bosswidth = 30, Bossheight = 44;
     
     public static BufferedImage[] blocks;
     public static BufferedImage[] player_right;
@@ -34,6 +35,10 @@ public class Images {
     public static BufferedImage[] SkelyFriend_left;
     public static BufferedImage[] SkelyFriend_front;
     public static BufferedImage[] SkelyFriend_back;
+    public static BufferedImage[] SmallBoss_right;
+    public static BufferedImage[] SmallBoss_left;
+    public static BufferedImage[] SmallBoss_front;
+    public static BufferedImage[] SmallBoss_back;
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
@@ -102,7 +107,12 @@ public class Images {
         SkelyFriend_right = new BufferedImage[4];
         SkelyFriend_front = new BufferedImage[4];
         SkelyFriend_back = new BufferedImage[4];
-
+        
+        SmallBoss_left = new BufferedImage[4];
+        SmallBoss_right = new BufferedImage[4];
+        SmallBoss_front = new BufferedImage[4];
+        SmallBoss_back = new BufferedImage[4];
+        
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
@@ -349,6 +359,27 @@ public class Images {
             SkelyFriend_back[1]=Cavesheet.crop(88,364,Catwidth,Catheight);
             SkelyFriend_back[2]=Cavesheet.crop(135,364,Catwidth,Catheight);
             SkelyFriend_back[3]=Cavesheet.crop(183,364,Catwidth,Catheight);
+            
+            //Small Boss anim
+            SmallBoss_front[0]=World2.crop(135,339,Bosswidth,Bossheight);
+            SmallBoss_front[1]=World2.crop(165,339,Bosswidth,Bossheight);
+            SmallBoss_front[2]=World2.crop(194,339,Bosswidth,Bossheight);
+            SmallBoss_front[3]=World2.crop(225,339,Bosswidth,Bossheight);
+
+            SmallBoss_left[0]=World2.crop(135,384,Bosswidth,Bossheight);
+            SmallBoss_left[1]=World2.crop(165,384,Bosswidth,Bossheight);
+            SmallBoss_left[2]=World2.crop(194,384,Bosswidth,Bossheight);
+            SmallBoss_left[3]=World2.crop(225,384,Bosswidth,Bossheight);
+
+            SmallBoss_right[0]=World2.crop(135,431,Bosswidth,Bossheight);
+            SmallBoss_right[1]=World2.crop(165,431,Bosswidth,Bossheight);
+            SmallBoss_right[2]=World2.crop(194,431,Bosswidth,Bossheight);
+            SmallBoss_right[3]=World2.crop(225,431,Bosswidth,Bossheight);
+
+            SmallBoss_back[0]=World2.crop(135,476,Bosswidth,Bossheight);
+            SmallBoss_back[1]=World2.crop(165,476,Bosswidth,Bossheight);
+            SmallBoss_back[2]=World2.crop(194,476,Bosswidth,Bossheight);
+            SmallBoss_back[3]=World2.crop(225,476,Bosswidth,Bossheight);
             
 
         } catch (IOException e) {
