@@ -42,7 +42,7 @@ public class Humanoid2 extends StaticEntity {
 
         ir.width = bounds.width;
         ir.height = bounds.height;
-        int irx=(int)(bounds.x-handler.getGameCamera().getxOffset()+width);
+        int irx=(int)(bounds.x-handler.getGameCamera().getxOffset()+300);
         int iry= (int)(bounds.y-handler.getGameCamera().getyOffset()+height);
         ir.y=iry;
         ir.x=irx;
@@ -79,10 +79,12 @@ public class Humanoid2 extends StaticEntity {
         	if(ir.contains(pr) && message>0){
         		RunesCounter=AirCounter+EarthCounter+MetalCounter+PlantCounter+FireCounter+WaterCounter;
         		message++;
-        		g.setColor(Color.BLACK);
+        		g.setColor(Color.WHITE);
         		g.fillRect((int)(x-handler.getGameCamera().getxOffset()+80),(int)(y-handler.getGameCamera().getyOffset()+30),250,100);
-        		g.setColor(Color.white);
-        		g.drawString("If you want to proceed you need to bring me the "+RunesCounter +" runes" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+45));
+        		g.setColor(Color.black);
+        		g.drawString("If you want to proceed you need to bring me" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+45));
+        		g.drawString("the "+RunesCounter +" runes" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+65));
+        		
         		for(Item i : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
         	
         			if(i.getId()==2) {
@@ -126,11 +128,12 @@ public class Humanoid2 extends StaticEntity {
             	}
         		 if(RunesCounter==0) {
                 	 TradeComplete=true;
-                	g.setColor(Color.BLACK);
+                	g.setColor(Color.WHITE);
                     g.fillRect((int)(x-handler.getGameCamera().getxOffset()+80),(int)(y-handler.getGameCamera().getyOffset()+30),250,100);
-                    g.setColor(Color.white);
-                    g.drawString("Thanks! Now you can search for the door. Good Luck!" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+45));
-                   
+                    g.setColor(Color.black);
+                    g.drawString("Thanks! Now you can now go to the next" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+45));
+                    g.drawString("world.Good luck!" ,(int)(x-handler.getGameCamera().getxOffset()+85),(int)(y-handler.getGameCamera().getyOffset()+65));
+                    
         		
                 }
 
@@ -139,10 +142,14 @@ public class Humanoid2 extends StaticEntity {
     }
 
               
-        	
+
     public static boolean getTrade() {
-        return TradeComplete;
+    	return TradeComplete;
     }
+    public static void setTradeComplete(boolean tradeComplete) {
+		TradeComplete = tradeComplete;
+	}
+   
         
     
 
@@ -154,4 +161,6 @@ public class Humanoid2 extends StaticEntity {
     	
 
     }
+
+	
 }

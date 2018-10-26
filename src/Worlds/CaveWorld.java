@@ -40,7 +40,7 @@ public class CaveWorld extends BaseWorld{
         entityManager.addEntity(new TreasureChest(handler,250, 1400,Item.waterRuneItem));
         entityManager.addEntity(new TreasureChest(handler,1400, 1400,Item.plantRuneItem));
         entityManager.addEntity(new BatEnemy(handler,1000,600,Item.metalRuneItem));
-        entityManager.addEntity(new Humanoid2(handler, 110, 0,world2));
+        entityManager.addEntity(new Humanoid2(handler, 300, 0,world2));
         
         
     }

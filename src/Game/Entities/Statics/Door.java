@@ -72,7 +72,7 @@ public class Door extends StaticEntity {
     @Override
     
     public void render(Graphics g) {
-    	if(Humanoid.TradeComplete) {
+    	if(Humanoid.Trade1Complete||Humanoid2.TradeComplete) {
         g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 
         g.setColor(Color.black);
@@ -90,6 +90,9 @@ public class Door extends StaticEntity {
             g.drawImage(Images.EP,(int) x+width,(int) y+10,32,32,null);
             g.drawImage(Images.loading,0,0,800,600,null);
             handler.setWorld(world);
+            Humanoid.setTrade1Complete(false);
+            Humanoid2.setTradeComplete(false);
+            
 
         }
         
