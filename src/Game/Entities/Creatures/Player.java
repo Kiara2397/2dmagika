@@ -144,11 +144,13 @@ public class Player extends CreatureBase {
         }
         
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
-        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.woodItem);
-        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.rockItem);
-        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.fireRuneItem);
-        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.HealthPotion);
-        	handler.getWorld().getEntityManager().getPlayer().getInventory().addOneItem(Item.CoinItem);
+        	for(int i=0; i<Item.items.length;i++) {
+        		if(Item.items[i]==null) 
+        			continue;
+        		else 
+        			handler.getWorld().getItemManager().addItem(Item.items[i].createNew((int)this.getX()+Item.ITEMWIDTH,(int)this.getY()+Item.ITEMWEIGHT,1));
+        		
+        	}
 
         }
 
@@ -168,7 +170,7 @@ public class Player extends CreatureBase {
     @Override
     public void render(Graphics g) {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.player_front,Images.player_back,Images.player_left,Images.player_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
-System.out.println(" "+handler.getWorld().getEntityManager().getPlayer().getX() + " "+handler.getWorld().getEntityManager().getPlayer().getY());
+
         if(FireBall){
             FireBallAttack(g);
 
