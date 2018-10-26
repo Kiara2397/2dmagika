@@ -168,7 +168,7 @@ public class Player extends CreatureBase {
     @Override
     public void render(Graphics g) {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.player_front,Images.player_back,Images.player_left,Images.player_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
-
+System.out.println(" "+handler.getWorld().getEntityManager().getPlayer().getX() + " "+handler.getWorld().getEntityManager().getPlayer().getY());
         if(FireBall){
             FireBallAttack(g);
 
