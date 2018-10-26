@@ -64,6 +64,7 @@ public class Images {
     public static BufferedImage[] Options;
 	public static BufferedImage[] Retry;
 	public static BufferedImage[] Replay;
+	public static BufferedImage[] Restart;
 	public static BufferedImage[] Quit;
     public static BufferedImage[] Runes;
     public static ImageIcon icon;
@@ -129,6 +130,7 @@ public class Images {
         items = new BufferedImage[3];
         numbers = new BufferedImage[21];
         Resume = new BufferedImage[2];
+        Restart = new BufferedImage[2];
         BTitle = new BufferedImage[2];
         Options = new BufferedImage[2];
         Retry = new BufferedImage[2];
@@ -159,8 +161,8 @@ public class Images {
             Pause = ImageIO.read(getClass().getResourceAsStream("/Buttons/NewPause.jpg"));
             Resume[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Resume.png"));
             Resume[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/ResumeP.png"));
-            BTitle[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitle.png"));
-            BTitle[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitleP.png"));
+            BTitle[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BMenu.png"));
+            BTitle[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BMenuP.png"));
             Options[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Options.png"));
             Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
             
@@ -232,6 +234,9 @@ public class Images {
 			
 			Replay[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Replay.png"));
 			Replay[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/ReplayP.png"));
+			
+			Restart[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Restart.png"));
+			Restart[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/RestartP.png"));
 
             particleSmoke[0]= newsheet.crop(111,397,18,38);
             particleSmoke[1]= newsheet.crop(129,399,20,35);

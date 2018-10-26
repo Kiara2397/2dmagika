@@ -28,6 +28,7 @@ public class GameOverState extends State {
         
         //Quit Button
         uiManager.addObjects(new UIImageButton(500, 455, 200, 80, Images.Quit, () -> {
+        	handler.getMouseManager().setUimanager(null);
             System.exit(0);
         }));
         
