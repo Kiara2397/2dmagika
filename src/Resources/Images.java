@@ -243,10 +243,7 @@ public class Images {
             particleSmoke[2]= newsheet.crop(154,400,20,35);
 
             items[0]= newsheet.crop(114,448,30,24);//log
-
-           
             items[2] = World2.crop(15, 16, 68, 98);//attackpotion!
-
             items[1]=Cavesheet.crop(442,352,25,25);//friendItem
 
 
