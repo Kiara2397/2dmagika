@@ -117,6 +117,8 @@ public class Player extends CreatureBase {
         }else if(handler.getKeyManager().fattbut){
 
             fireAttack();
+            
+           
 
 
         }
@@ -139,14 +141,19 @@ public class Player extends CreatureBase {
         			Item.friendItem.setPickedUp(false);
         			i.setCount(i.getCount()-1);
         		}
-        	}if(i.getName()=="Attack Potion"&&i.getCount()!=0) {
-        		attack+=(4*i.getCount());
-        		i.setCount(0);
-        		return;
+        	}     if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_T)) {
+            	if(i.getName()=="Attack Potion"&&i.getCount()!=0) {
+            		if(attack<18) {
+            			attack+=4;
+            			i.setCount(i.getCount()-1);
+            			System.out.println(""+attack);
+            		}
         		
+            }
         	}
-        	
         }
+        	
+        
         
         if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
         	for(int i=0; i<Item.items.length;i++) {
@@ -164,6 +171,9 @@ public class Player extends CreatureBase {
         	health+=75-getHealth();
         	System.out.println("Regenerate Health");
         }
+        
+   
+        
         //Inventory
         inventory.tick();
         
