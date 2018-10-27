@@ -1,9 +1,9 @@
 package Game.Entities.Statics;
 
-import Resources.Images;
-import Main.Handler;
+import java.awt.Graphics;
 
-import java.awt.*;
+import Main.Handler;
+import Resources.Images;
 
 /**
  * Created by Elemental on 1/2/2017.

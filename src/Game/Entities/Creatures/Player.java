@@ -1,16 +1,19 @@
 package Game.Entities.Creatures;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+
 import Game.Entities.EntityBase;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
 import Game.SpellCast.SpellCastUI;
+import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
-import Main.Handler;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 /**
  * Created by Elemental on 1/1/2017.

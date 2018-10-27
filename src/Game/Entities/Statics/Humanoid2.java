@@ -1,14 +1,14 @@
 package Game.Entities.Statics;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
 import Game.Entities.Creatures.Player;
-import Game.GameStates.State;
 import Game.Items.Item;
-import Game.SpellCast.Spells;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
-
-import java.awt.*;
 
 /**
  * Created by Elemental on 2/2/2017.

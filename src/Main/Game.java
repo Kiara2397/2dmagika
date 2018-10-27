@@ -1,5 +1,21 @@
 package Main;
 
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+import Display.DisplayScreen;
 import Game.GameStates.GameOverState;
 import Game.GameStates.GameState;
 import Game.GameStates.GameWonState;
@@ -10,15 +26,6 @@ import Inputs.KeyManager;
 import Inputs.MouseManager;
 import Resources.GameCamera;
 import Resources.Images;
-import Display.DisplayScreen;
-
-import javax.imageio.ImageIO;
-import javax.sound.sampled.*;
-import java.awt.*;
-import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * Created by Elemental on 12/10/2016.

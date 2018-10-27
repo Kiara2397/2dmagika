@@ -1,12 +1,11 @@
 package Game.GameStates;
 
+import java.awt.Graphics;
+
 import Main.Handler;
 import Resources.Images;
 import UI.UIImageButton;
 import UI.UIManager;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
 
 /**
  * Created by Elemental on 2/3/2017.

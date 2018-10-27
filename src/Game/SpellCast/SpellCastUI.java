@@ -1,14 +1,14 @@
 package Game.SpellCast;
 
-import Game.Items.Item;
-import Main.Handler;
-import Resources.Images;
-import UI.*;
-import UI.UIManager;
-
-import java.awt.*;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+
+import Main.Handler;
+import Resources.Images;
+import UI.ClickListlener;
+import UI.UIManager;
+import UI.UISpellGUI;
 
 /**
  * Created by Elemental on 2/10/2017.

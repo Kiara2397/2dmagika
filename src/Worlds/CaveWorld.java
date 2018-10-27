@@ -3,7 +3,6 @@ import Game.Entities.Creatures.BatEnemy;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.Door;
-import Game.Entities.Statics.Humanoid;
 import Game.Entities.Statics.Humanoid2;
 import Game.Entities.Statics.Rock;
 import Game.Entities.Statics.Stalagmite;

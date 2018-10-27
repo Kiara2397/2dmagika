@@ -1,18 +1,18 @@
 package Worlds;
 
+import java.awt.Graphics;
+
+import com.sun.glass.events.KeyEvent;
+
+import Game.Entities.EntityManager;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyFriend;
-import Game.Entities.EntityManager;
 import Game.GameStates.State;
 import Game.Items.Item;
 import Game.Items.ItemManager;
 import Game.Tiles.Tile;
 import Main.Handler;
 import Resources.Utils;
-
-import java.awt.*;
-
-import com.sun.glass.events.KeyEvent;
 
 /**
  * Created by Elemental on 2/10/2017.

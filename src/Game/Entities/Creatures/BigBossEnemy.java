@@ -1,18 +1,16 @@
 package Game.Entities.Creatures;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.util.Random;
+
 import Game.Entities.EntityBase;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
-import Game.Items.Item;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
-import Worlds.BaseWorld;
-import Worlds.FinalWorld;
-import Worlds.World1;
-
-import java.awt.*;
-import java.util.Random;
 
 /**
  * Created by Elemental on 2/7/2017.

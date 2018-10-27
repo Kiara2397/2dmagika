@@ -2,14 +2,14 @@ package Game.GameStates;
 
 
 
-import Main.Game;
+import java.awt.Color;
+import java.awt.Graphics;
+
+import Main.Handler;
 import Resources.Images;
 import UI.ClickListlener;
 import UI.UIImageButton;
 import UI.UIManager;
-import Main.Handler;
-
-import java.awt.*;
 
 /**
  * Created by Elemental on 12/10/2016.

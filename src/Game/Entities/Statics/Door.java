@@ -1,7 +1,10 @@
 package Game.Entities.Statics;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
 import Game.Entities.Creatures.Player;
-import Game.GameStates.State;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
@@ -9,8 +12,6 @@ import Worlds.CaveWorld;
 import Worlds.FinalWorld;
 import Worlds.World1;
 import Worlds.World2;
-
-import java.awt.*;
 
 /**
  * Created by Elemental on 2/2/2017.

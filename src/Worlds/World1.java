@@ -2,7 +2,11 @@ package Worlds;
 
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
-import Game.Entities.Statics.*;
+import Game.Entities.Statics.Door;
+import Game.Entities.Statics.Humanoid;
+import Game.Entities.Statics.Rock;
+import Game.Entities.Statics.TreasureChest;
+import Game.Entities.Statics.Tree;
 import Game.Items.Item;
 import Main.Handler;
 
