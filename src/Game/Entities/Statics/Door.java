@@ -67,6 +67,7 @@ public class Door extends StaticEntity {
         		handler.setWorld(world);
         		handler.getWorld().getEntityManager().getPlayer().setX(130);
         		handler.getWorld().getEntityManager().getPlayer().setY(90);
+        		BaseWorld.setSummon(false);
         	}
 
         }
@@ -95,6 +96,7 @@ public class Door extends StaticEntity {
             handler.setWorld(world);
             Humanoid.setTrade1Complete(false);
             Humanoid2.setTradeComplete(false);
+            BaseWorld.setSummon(false);
             
 
         }

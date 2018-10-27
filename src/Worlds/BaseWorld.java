@@ -143,4 +143,12 @@ public class BaseWorld {
         this.itemManager = itemManager;
     }
 
+	public static boolean isSummon() {
+		return summon;
+	}
+
+	public static void setSummon(boolean summon) {
+		BaseWorld.summon = summon;
+	}
+
 }
