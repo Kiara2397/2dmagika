@@ -139,6 +139,11 @@ public class Player extends CreatureBase {
         			Item.friendItem.setPickedUp(false);
         			i.setCount(i.getCount()-1);
         		}
+        	}if(i.getName()=="Attack Potion"&&i.getCount()!=0) {
+        		attack+=(4*i.getCount());
+        		i.setCount(0);
+        		return;
+        		
         	}
         	
         }
