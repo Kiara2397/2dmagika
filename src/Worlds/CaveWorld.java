@@ -41,6 +41,9 @@ public class CaveWorld extends BaseWorld{
         entityManager.addEntity(new BatEnemy(handler,1000,600,Item.metalRuneItem));
         entityManager.addEntity(new Humanoid2(handler, 300, 0,world2));
         
+        entityManager.getPlayer().setX(130);
+        entityManager.getPlayer().setY(90);
+        
         
     }
 

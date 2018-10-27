@@ -14,6 +14,7 @@ import Game.SpellCast.SpellCastUI;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
+import Worlds.BaseWorld;
 
 /**
  * Created by Elemental on 1/1/2017.
@@ -138,13 +139,17 @@ public class Player extends CreatureBase {
         			return;
         		}
         	}
-           	if (i.getName() == "Friend Item" && i.getCount()!=0) {
+        	if (i.getName() == "Friend Item" && i.getCount()!=0) {
         		Item.friendItem.setPickedUp(true);
-        		if(Item.friendItem.getCount()==0) {
-        			Item.friendItem.setPickedUp(false);
+        		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G)&&!BaseWorld.summon){
         			i.setCount(i.getCount()-1);
         		}
-        	}     if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_T)) {
+        		else if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G)&&BaseWorld.summon) {
+        			Item.friendItem.setPickedUp(false);
+        		}
+        	}
+        	
+           	if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_T)) {
             	if(i.getName()=="Attack Potion"&&i.getCount()!=0) {
             		if(attack<18) {
             			attack+=4;

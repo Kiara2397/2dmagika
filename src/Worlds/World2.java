@@ -30,7 +30,9 @@ public class World2 extends BaseWorld{
         entityManager.addEntity(new BatEnemy(handler,400,1500,Item.AttackPotion));
         entityManager.addEntity(new Door(handler,300,0,finalWorld));
         
-        
+
+        entityManager.getPlayer().setX(130);
+        entityManager.getPlayer().setY(90);
         
     }
 

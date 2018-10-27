@@ -24,6 +24,7 @@ public class BaseWorld {
     protected int spawnX, spawnY;
     protected int[][] tiles;
     protected int countP = 0;
+    public static boolean summon = false;
 
     protected EntityManager entityManager;
 
@@ -59,7 +60,7 @@ public class BaseWorld {
         
         if(Item.friendItem.isPickedUp() && handler.getKeyManager().keyJustPressed(KeyEvent.VK_G)) {
     		  handler.getWorld().getEntityManager().addEntity(new SkelyFriend(handler,entityManager.getPlayer().getX()+entityManager.getPlayer().getWidth(),entityManager.getPlayer().getY()));
-    		  Item.friendItem.setCount(Item.friendItem.getCount()-1);
+    		  summon=true;
     	  }
     }
 
